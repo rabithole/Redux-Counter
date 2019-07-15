@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'; // This connects this component with the redux store. 
 import { increment, decrement } from '../actions';
 
 class Counter extends Component {
@@ -56,4 +56,12 @@ const mapStateToProps = (state) => {
 // is only a dumb React component. We pass in all of the functions that
 // are reliant on Redux, along with the component itself, so that Redux
 // makes itself known to this component.
+
+
+// Connect gets called 2x's
+// first call takes in two arguements. 
+// -1st call: function called 'mapStateToProps', which allows us to pull items from the redux store. 
+// -2nd call: an object to pass our action creators to the component. 
+
+// The state we get from mSTP, and the action creators we give tot he object. will all be available to this component via props. 
 export default connect(mapStateToProps, { increment, decrement })(Counter);

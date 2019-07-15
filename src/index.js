@@ -1,16 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
+import { createStore } from 'redux'; // Part of creating the store. 
 import { Provider } from 'react-redux';
 import Counter from './components/Counter';
 import counter from './reducers';
 
-// This line instantiates our central Redux store.
-// The `createStore` function receives the reducer
-// that is responsible for updating the store, along
-// with any initial state that we may want the store
-// to start out with (which is none in this case).
-const store = createStore(counter);
+//  This creates the store which is passed to the provider below. 
+const store = createStore(counter); // Counter is the reducer function. 
 
 // Here, we wrap our main React component inside of
 // Provider tags, which come from the react-redux package.
